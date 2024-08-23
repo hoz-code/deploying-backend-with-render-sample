@@ -13,12 +13,14 @@ const pool = new Pool({
 
 // Bored API base URL
 //const BORED_API_BASE_URL = 'https://www.boredapi.com/api/';
-const BORED_API_BASE_URL = 'https://bored-api.appbrewery.com/random';
+const BORED_API_BASE_URL = 'https://bored-api.appbrewery.com/';
 console.log('BORED_API_BASE_URL');
 console.log(BORED_API_BASE_URL);
 async function getRandomActivity() {
   try {
-    const response = await fetch(BORED_API_BASE_URL + 'activity');
+    const response = await fetch(BORED_API_BASE_URL + 'random');
+    console.log('im response');
+    console.log(response);
     if (response.ok) {
       const data = await response.json();
       return data.activity;
