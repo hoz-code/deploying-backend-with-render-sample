@@ -48,6 +48,7 @@ app.get('/insert_activity', async (req, res) => {
 });
 
 app.get('/', async (req, res) => {
+  console.log('Im console.log from root URL');
   try {
     const client = await pool.connect();
 
