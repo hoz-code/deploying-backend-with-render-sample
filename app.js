@@ -32,6 +32,7 @@ app.get('/insert_activity', async (req, res) => {
   try {
     const client = await pool.connect();
     const activityName = await getRandomActivity();
+    console.log('im console.log');
     console.log(activityName);
     if (activityName) {
       await client.query('INSERT INTO my_activities (activity) VALUES ($1)', [activityName]);
