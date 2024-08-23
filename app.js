@@ -12,7 +12,8 @@ const pool = new Pool({
 });
 
 // Bored API base URL
-const BORED_API_BASE_URL = 'https://www.boredapi.com/api/';
+//const BORED_API_BASE_URL = 'https://www.boredapi.com/api/';
+const BORED_API_BASE_URL = 'https://bored-api.appbrewery.com/random';
 
 async function getRandomActivity() {
   try {
